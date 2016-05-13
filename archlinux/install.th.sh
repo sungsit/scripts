@@ -74,8 +74,6 @@ arch-chroot /mnt /bin/sh -c 'systemctl enable dhcpcd.service'
 # cleaup
 arch-chroot /mnt /bin/bash -c 'rm -rf /var/cache/pacman/pkg/*'
 arch-chroot /mnt /bin/bash -c 'rm -rf /var/lib/pacman/sync/*'
-arch-chroot /mnt /bin/sh -c 'dd if=/dev/zero of=/EMPTY bs=1M'
-arch-chroot /mnt /bin/sh -c 'rm -f /EMPTY'
 
 # root passwd
 tput smso; tput bold; echo " Do not forget to set your root password! "; tput rmso; tput sgr0; echo
